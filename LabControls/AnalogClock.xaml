@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="LabControls.AnalogClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LabControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200">
+    <Viewbox>
+        <Grid x:Name="grid" Width="150" Height="150">
+            <!-- Циферблат -->
+            <Ellipse x:Name="el" Stroke="Black" StrokeThickness="2"/>
+
+            
+
+            <Path Stroke="Black" StrokeThickness="2" Data="M 75,75 L 75,10" RenderTransformOrigin=".5, .5">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="minuteHandTransform"/>
+                </Path.RenderTransform>
+            </Path>
+            <Path Stroke="Black" StrokeThickness="2" Data="M 75,75 L 75,35"  RenderTransformOrigin=".5, .5">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="hourHandTransform" Angle="90"/>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </Viewbox>
+</UserControl>
